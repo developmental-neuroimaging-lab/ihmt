@@ -2,6 +2,10 @@
 #threshold qihMT maps to remove negative values
 #Meaghan Perdue 15 Nov 2022
 
-for i in $(cat subjlist.txt); do
+cd /Volumes/catherine_team/mvperdue/preschool/ihMT_KatJess/new_data
+
+for i in $(cat /Volumes/catherine_team/mvperdue/preschool/ihMT_KatJess/src/subjlist_usable.txt); do
+	cd ${i}
 	fslmaths ${i}_qihMTMasked.nii.gz -thr 0 ${i}_qihMTMaskedThresh.nii.gz
+	cd /Volumes/catherine_team/mvperdue/preschool/ihMT_KatJess/new_data
 done
