@@ -7,7 +7,7 @@ cd /Volumes/catherine_team/mvperdue/preschool/ihMT_KatJess/new_data
 
 #Calculate qihMT maps for each subject
 
-for i in $(cat /Volumes/catherine_team/mvperdue/preschool/ihMT_KatJess/src/subjlist.txt); do
+for i in $(cat /Volumes/catherine_team/mvperdue/preschool/ihMT_KatJess/src/tmp_subs.txt); do
 	cd ${i}
 	3dcalc -datum float -a ${i}-Positive.nii[0] -b ${i}-Positive.nii[1] -c ${i}-Positive.nii[2] -expr '(a+b+c)/3' -prefix ${i}-Positive_Avg.nii #average of positive
 	3dcalc -datum float -a ${i}-Negative.nii[0] -b ${i}-Negative.nii[1] -c ${i}-Negative.nii[2] -expr '(a+b+c)/3' -prefix ${i}-Negative_Avg.nii #average of negative

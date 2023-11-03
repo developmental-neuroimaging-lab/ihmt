@@ -7,7 +7,8 @@
 cd /Volumes/catherine_team/mvperdue/preschool/ihMT_KatJess/new_data
 
 
-for i in $(cat /Volumes/catherine_team/mvperdue/preschool/ihMT_KatJess/src/subjlist_usable.txt); do
+for i in $(cat /Volumes/catherine_team/mvperdue/preschool/ihMT_KatJess/src/tmp_subs.txt); 
+do
 	cd ${i}
 	fslswapdim ${i}-MTR_Manual.nii RL PA IS ${i}_MTR_Manual_swap.nii	
 	bet2 ${i}_MTR_Manual_swap.nii.gz ${i}_MTRBrain.nii -f 0.8

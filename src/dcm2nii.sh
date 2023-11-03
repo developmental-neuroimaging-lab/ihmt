@@ -8,7 +8,7 @@ for i in $(cat /Volumes/catherine_team/mvperdue/preschool/ihMT_KatJess/src/tmp_s
 	dcm2niix -f ${i}-ihmt \
 	-b y -ba y -z y \
 	-o /Volumes/catherine_team/mvperdue/preschool/ihMT_KatJess/new_data \
-	dcm2niix tmp_dcm/$i/*
+	tmp_dcm/$i/*
 done
 
 
